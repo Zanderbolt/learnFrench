@@ -1,0 +1,22 @@
+.title {
+    font-size: 12x;
+    color: black;
+}
+
+.title-card {
+    background: linear-gradient(#B5DFCA, #C5E7E2);
+}
+
+.img-card{
+    width: 128px; 
+    height: 128px;
+    display: block; 
+    margin:  0 auto;
+}
+
+.backgroundCard {
+    background: linear-gradient(#C5E7E2, #AD9BAA);
+    :active {
+      opacity: 0.8;
+    }
+  }

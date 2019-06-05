@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Learn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Title Card -->
+  <ion-card class="background-title-card" *ngIf="this.topicService._activeTopic[4]">
+    <ion-card-header>
+      <ion-row text-center>
+        <ion-col>
+          <ion-card-title class="background-title-card"> <strong> Select a Topic to Begin!</strong> </ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+
+  </ion-card>
+
+
+  <!-- Food Card -->
+  <ion-card class="foodCard" *ngIf="this.topicService._activeTopic[0]">
+    <ion-card-header>
+      <ion-row text-center>
+        <ion-col>
+          <ion-card-title class="font-color-title-card">
+            Your Selected Topic is: <br>
+            <strong class="topicText"> {{this.topicService.selectedTopic}} </strong>
+          </ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Transport Card -->
+  <ion-card class="transportCard" *ngIf="this.topicService._activeTopic[1]">
+    <ion-card-header>
+      <ion-row text-center>
+        <ion-col>
+          <ion-card-title class="font-color-title-card">
+            Your Selected Topic is: <br>
+            <strong class="topicText"> {{this.topicService.selectedTopic}} </strong>
+          </ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Animals Card -->
+  <ion-card class="animalCard" *ngIf="this.topicService._activeTopic[2]">
+    <ion-card-header>
+      <ion-row text-center>
+        <ion-col>
+          <ion-card-title class="font-color-title-card">
+            Your Selected Topic is: <br>
+            <strong class="topicText"> {{this.topicService.selectedTopic}} </strong>
+          </ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Verbs Card -->
+  <ion-card class="verbCard" *ngIf="this.topicService._activeTopic[3]">
+    <ion-card-header>
+      <ion-row text-center>
+        <ion-col>
+          <ion-card-title class="font-color-title-card">
+            Your Selected Topic is: <br>
+            <strong class="topicText"> {{this.topicService.selectedTopic}} </strong>
+          </ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Questions -->
+  <app-food *ngIf="this.topicService._activeTopic[0]"></app-food>
+  <app-transport *ngIf="this.topicService._activeTopic[1]"></app-transport>
+  <app-animals *ngIf="this.topicService._activeTopic[2]"></app-animals>
+  <app-verbs *ngIf="this.topicService._activeTopic[3]"></app-verbs>
+
+  
+
+
+</ion-content>

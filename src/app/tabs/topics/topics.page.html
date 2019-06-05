@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Topics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    
+  <!-- Title Card -->
+  <ion-card class="background-title-card">
+    <ion-card-header>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+          <!-- <ion-card-title>Apprendre le français</ion-card-title> -->
+          <img src="../../assets/imgs/france.png" />
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row text-center>
+        <ion-col>
+          <ion-card-title class="font-color-title-card"> <strong> Apprendre le français </strong> </ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-row text-center>
+        <ion-col class="font-color-title-card bodyText">
+          Sélectionnez le sujet que vous souhaitez pratiquer
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row text-center>
+    <ion-col>
+      <ion-card class="foodCard" (click)="selectTopic('Food')">
+        <!-- Food Card -->
+        <ion-card-header>
+          <ion-row>
+            <ion-col class="cardText">
+              <img src="../../assets/imgs/food.png">
+              <br>
+              Aliments
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <!-- Transport Card -->
+      <ion-card class="transportCard" (click)="selectTopic('Transport')">
+        <ion-card-header>
+          <ion-row>
+            <ion-col class="cardText">
+              <img src="../../assets/imgs/transport.png">
+              <br>
+              Transport
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row text-center>
+    <ion-col>
+      <!-- Animaux Card -->
+      <ion-card class="animalCard" (click)="selectTopic('Animals')">
+        <ion-card-header>
+          <ion-row>
+            <ion-col class="cardText">
+              <img src="../../assets/imgs/animals.png">
+              <br>
+              Animaux
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <!-- Verbes Card -->
+      <ion-card class="verbCard" (click)="selectTopic('Verbs')">
+        <ion-card-header>
+          <ion-row>
+            <ion-col class="cardText">
+              <img src="../../assets/imgs/verbs.png">
+              <br>
+              Verbes
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+ 
+
+
+</ion-content>

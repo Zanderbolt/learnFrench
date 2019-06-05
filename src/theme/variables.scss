@@ -3,6 +3,17 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+  @font-face {
+    font-family: 'Acme', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Acme&display=swap');//path to your font file
+  }
+  
+  * {
+    font-family: 'Acme';
+  }
+
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;

@@ -1,0 +1,140 @@
+<ion-card class="title-card">
+    <ion-card-header>
+      <ion-card-title text-center class="title" text>Comment dit-on?...</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content text-center>
+        Select the correct Word
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <!-- Dog Card -->
+  <ion-card text-center class="backgroundCard" [disabled] = "disabledQuestion[0]">
+    <ion-row>
+      <ion-col text-center>
+        <ion-img class="img-card" src="../../../../assets/imgs/topics/animals/dog.png"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!-- CORRECT -->
+        <ion-button (click)="checkAnswer(0,1)" expand="block">Chien</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="checkAnswer(0,2)" color="secondary" expand="block">Abeille</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="checkAnswer(0,3)" color="success" expand="block">Caméléon</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="checkAnswer(0,4)" color="tertiary" expand="block">Cheval</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  
+  <!-- Crab Card -->
+  <ion-card text-center class="backgroundCard" [disabled] = "disabledQuestion[1]">
+      <ion-row>
+        <ion-col text-center>
+          <ion-img class="img-card" src="../../../../assets/imgs/topics/animals/crab.png"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(1,1)" expand="block">Mouche</ion-button>
+        </ion-col>
+        <ion-col>
+          <!-- CORRECT -->
+          <ion-button (click)="checkAnswer(1,2)" color="secondary" expand="block">Crabe</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(1,3)" color="success" expand="block">Renard</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="checkAnswer(1,4)" color="tertiary" expand="block">Souris</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+    <!-- Horse Card -->
+  <ion-card text-center class="backgroundCard" [disabled] = "disabledQuestion[2]">
+      <ion-row>
+        <ion-col text-center>
+          <ion-img class="img-card" src="../../../../assets/imgs/topics/animals/horse.png"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(2,1)" expand="block">Citron</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="checkAnswer(2,2)" color="secondary" expand="block">Dauphin</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(2,3)" color="success" expand="block">Ours</ion-button>
+        </ion-col>
+        <ion-col>
+          <!-- CORRECT -->
+          <ion-button (click)="checkAnswer(2,4)" color="tertiary" expand="block">Cheval</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+    <!-- Pig Card -->
+  <ion-card text-center class="backgroundCard" [disabled] = "disabledQuestion[3]">
+      <ion-row>
+        <ion-col text-center>
+          <ion-img class="img-card" src="../../../../assets/imgs/topics/animals/pig.png"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(3,1)" expand="block">Poule</ion-button>
+        </ion-col>
+        <ion-col>
+          <!-- CORRECT -->
+          <ion-button (click)="checkAnswer(3,2)" color="secondary" expand="block">Porc</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(3,3)" color="success" expand="block">Abeille</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="checkAnswer(3,4)" color="tertiary" expand="block">Pêche</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+    <!-- Turtle Card -->
+  <ion-card text-center class="backgroundCard" [disabled] = "disabledQuestion[4]">
+      <ion-row>
+        <ion-col text-center>
+          <ion-img class="img-card" src="../../../../assets/imgs/topics/animals/turtle.png"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="checkAnswer(4,1)" expand="block">Chevre</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="checkAnswer(4,2)" color="secondary" expand="block">Girafe</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <!-- CORRECT -->
+          <ion-button (click)="checkAnswer(4,3)" color="success" expand="block">Tortue</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="checkAnswer(4,4)" color="tertiary" expand="block">Tigre</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>

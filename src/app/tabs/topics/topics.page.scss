@@ -1,0 +1,46 @@
+.font-color-title-card {
+    color: white;
+}
+
+.background-title-card {
+    background: black
+}
+
+.bodyText {
+    font-size: 20px;
+  }
+
+.cardText {
+    font-size: 20px;
+    font-weight: bold;
+    color: black 
+}
+
+  .foodCard {
+    background: linear-gradient(#ffc3a0, #ffafbd);
+    :active {
+      opacity: 0.8;
+    }
+  }
+
+  .transportCard {
+    background: linear-gradient(#cfd9df, #e2ebf0);
+    :active {
+      opacity: 0.8;
+    }
+  }
+
+  .animalCard {
+    background: linear-gradient(#c79081, #dfa579);
+    :active {
+      opacity: 0.8;
+    }
+  }
+
+  .verbCard {
+    background: linear-gradient(#a1c4fd, #c2e9fb);
+    :active {
+      opacity: 0.8;
+    }
+  }
+
