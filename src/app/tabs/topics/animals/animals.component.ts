@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
+import { TopicsService } from '../../../services/topics.service';
+
+
 
 @Component({
   selector: 'app-animals',
@@ -7,14 +11,60 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalsComponent implements OnInit {
   correctResults: number[] = [1, 2, 4, 2, 3]
-  disabledQuestion: boolean[] = [false,false,false,false,false]
-  constructor() { }
+  disabledQuestion: boolean[] = [false, false, false, false, false]
+  correctAnswers: number = 0;
+  
+  questionsAnswered: number = 0;
+  constructor(public toastController: ToastController, private topicService: TopicsService) { }
 
-  ngOnInit() {}
+  async correctToast() {
+    
+    const toast = await this.toastController.create({
+      message: 'Correct',
+      position: 'top',
+      duration: 1000,
+      color: 'success',
+      buttons: [
+        {
+          icon: 'checkmark-circle'
+        }
+      ]
+    });
+    toast.present();
+  }
+
+  async incorrectToast() {
+    const toast = await this.toastController.create({
+      message: 'Inorrect',
+      position: 'top',
+      duration: 1000,
+      color: 'danger',
+      buttons: [
+        {
+          icon: 'close-circle'
+        }
+      ]
+    });
+    toast.present();
+  }
+
+  ngOnInit() { }
 
   checkAnswer(questionNumber: number, questionAnswer: number) {
-    this.correctResults[questionNumber] == questionAnswer ? alert("Correct") : alert("Incorrect");
-    this.disabledQuestion[questionNumber] = true    
+    this.questionsAnswered++;
+    if (this.correctResults[questionNumber] == questionAnswer) {
+      this.correctToast()
+      this.correctAnswers++
+    }
+    else {
+      this.incorrectToast()
+    }
+    this.disabledQuestion[questionNumber] = true
+    this.correctAnswers >= 3 ? this.topicService._approvedTopics[2] = true : this.topicService._approvedTopics[2] = false
+    this.questionsAnswered == 5 ? this.topicService._finishedTopics[2] = true : this.topicService._finishedTopics[2] = false
   }
   
+  
+  
+
 }

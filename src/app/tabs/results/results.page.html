@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row text-center>
+      <ion-col>
+        <h1 class="title-text">Tree Of Results</h1>
+        <h3>Topics Missing:</h3>
+        <h6 *ngIf="!this.topicService._finishedTopics[0]" class="missing-text" (click)="selectTopic('Food')" routerLink="/tabs/learn">Food</h6>
+        <h6 *ngIf="!this.topicService._finishedTopics[1]" class="missing-text" (click)="selectTopic('Transport')" routerLink="/tabs/learn">Transport</h6>
+        <h6 *ngIf="!this.topicService._finishedTopics[2]" class="missing-text" (click)="selectTopic('Animals')" routerLink="/tabs/learn">Animals</h6>
+        <h6 *ngIf="!this.topicService._finishedTopics[3]" class="missing-text" (click)="selectTopic('Verbs')" routerLink="/tabs/learn">Verbs</h6>
+      </ion-col>
+    </ion-row>
+
+    <!-- FULL TREE -->
+    <ion-row *ngIf=" !this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/TREE.png"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD -->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/1FOOD.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD AND TRANSPORT-->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/2TRANSPORT-FOOD.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD AND ANIMALS-->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/2FOOD-ANIMALS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD AND VERBS-->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/2VERBS-FOOD.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD AND TRANSPORT AND ANIMALS-->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && this.topicService._approvedTopics[1] 
+                  && this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/TRANSPORT-FOOD-AINMALS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD AND TRANSPORT AND VERBS-->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/TRANSPORT-FOOD-VERBS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY FOOD AND ANIMAL AND VERBS-->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && this.topicService._approvedTopics[2] 
+                  && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/food-verbs-animals.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY TRANSPORT-->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+                  && this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/1TRANSPORT.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY TRANSPORT AND ANIMALS-->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+                  && this.topicService._approvedTopics[1] 
+                  && this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/2ANIMALS-TRANSPORT.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY TRANSPORT AND VERBS-->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+                  && this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/2TRANSPORT-VERBS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY TRANSPORT AND ANIMALS AND VERBS-->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+     && this.topicService._approvedTopics[1] 
+     && !this.topicService._approvedTopics[2] 
+     && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/3ANIMALS-TRANSPORT-VERBS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+
+    <!-- ONLY ANIMALS -->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && this.topicService._approvedTopics[2] 
+                  && !this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/1ANIMALS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY ANIMALS VERBS -->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && this.topicService._approvedTopics[2] 
+                  && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/2VERBS-ANIMALS.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ONLY VERBS -->
+    <ion-row *ngIf="!this.topicService._approvedTopics[0] 
+                  && !this.topicService._approvedTopics[1] 
+                  && !this.topicService._approvedTopics[2] 
+                  && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/1VERB.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <!-- ALL CORRECT -->
+    <ion-row *ngIf="this.topicService._approvedTopics[0] 
+     && this.topicService._approvedTopics[1] 
+     && this.topicService._approvedTopics[2] 
+     && this.topicService._approvedTopics[3]">
+      <ion-col>
+        <h6 text-center> Congratulations! </h6>
+        <ion-img class="img-card" src="../../../../assets/imgs/TREE/TreeFULL.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

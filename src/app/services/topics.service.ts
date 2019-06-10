@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 export class TopicsService {
 
   selectedTopic: string = "";
-  _activeTopic: boolean[] = [false, false, false, false, true] //FOOD, TRANSPORT, ANIMALS, VERBS
+  _activeTopic: boolean[] =     [false, false, false, false, true]      //FOOD, TRANSPORT, ANIMALS, VERBS
+  _approvedTopics: boolean[] =  [false, false, false, false]     //FOOD, TRANSPORT, ANIMALS, VERBS
+  _finishedTopics: boolean[] =  [false, false, false, false]     //FOOD, TRANSPORT, ANIMALS, VERBS
 
   activeTopic() {
     switch (this.selectedTopic) {

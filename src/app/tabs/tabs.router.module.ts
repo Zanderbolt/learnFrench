@@ -27,24 +27,33 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'info',
+        path: 'results',
         children: [
           {
             path: '',
-            loadChildren: './info/info.module#InfoPageModule'
+            loadChildren: './results/results.module#ResultsPageModule'
+          }
+        ]
+      },
+      {
+        path: 'how-to-use',
+        children: [
+          {
+            path: '',
+            loadChildren: '../how-to-use/how-to-use.module#HowToUsePageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/learn',
+        redirectTo: 'tabs/how-to-use',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/learn',
+    redirectTo: 'tabs/how-to-use',
     pathMatch: 'full'
   }
 ];
