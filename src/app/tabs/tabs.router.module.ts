@@ -36,6 +36,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'practice',
+        children: [
+          {
+            path: '',
+            loadChildren: './practice/practice.module#PracticePageModule'
+          }
+        ]
+      },
+      {
         path: 'how-to-use',
         children: [
           {
